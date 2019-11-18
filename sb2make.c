@@ -106,7 +106,7 @@ int main(int argc, char **argv)
 		if (ch == '\n' || i == size - 1)
 		{
 			// Write line length
-			short lineLength = (short)i + 1 - (short)lineStart;
+			short lineLength = (short)(i + 1 - lineStart);
 			fwrite(&lineLength, sizeof(short), 1, output);
 
 			// Write line data (including newline)
